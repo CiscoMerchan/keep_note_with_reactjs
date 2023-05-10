@@ -1,10 +1,9 @@
 import React from "react";
-
+import Header from "./Header";
 function App(){
     return(
-    <><div>
-            <h1>Keep Note</h1>
-        </div>
+    <>
+    <Header />
         <di>
             <h2>Create Note</h2>
         </di>
