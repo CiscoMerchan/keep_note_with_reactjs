@@ -8,7 +8,10 @@ function App(){
     <>
     <Header />
         <CreateNote />
-        <Note />
+        <Note 
+            title="Title"
+            content="content"
+        />
     
     <Footer />
     </>
