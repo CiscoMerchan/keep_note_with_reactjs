@@ -25,6 +25,13 @@ function App(){
             be by passing a function("addNote()") as props ("onAdd")*/
             onAdd={addNote}
         />
+        {/* .map() to render Note components from 'notes' array */}
+        {notes.map((noteItem) => {
+            return <Note
+            title={noteItem.title}
+            content={noteItem.content} />
+            })
+            }
         <Note 
             title="Title"
             content="content"
