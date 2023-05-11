@@ -10,11 +10,16 @@ function App(){
     const [notes, setNotes]=useState([])
 
     function addNote(note){
-        console.log(note)
+        console.log(note);
         // populate 'notes'
         setNotes(prevNotes =>{
             return [...prevNotes, note];
         })
+    }
+
+    /*function to delete Note from the array 'notes' using props*/ 
+    function deleteNote(id){
+        console.log('delete this item');
     }
 
     return(
@@ -28,14 +33,18 @@ function App(){
         {/* .map() to render Note components from 'notes' array */}
         {notes.map((noteItem) => {
             return <Note
+            key={1}
             title={noteItem.title}
-            content={noteItem.content} />
+            content={noteItem.content} 
+            // props to delete Note in the array 'notes' this props will trigger the deleteNote()
+            onDelete={deleteNote}
+            />
             })
             }
-        <Note 
+        {/* <Note 
             title="Title"
             content="content"
-        />
+        /> */}
     
     <Footer />
     </>

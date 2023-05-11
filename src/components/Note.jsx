@@ -4,7 +4,11 @@ import React from "react";
 
 function Note(props){
     
-    function handleClick(){}
+    function handleClick(){
+        /* Once the user click in delete button it will trigger the props.onDelete()
+         which is the deleteNote() in App component*/
+        props.onDelete()
+    }
     
     return(
         <div className="note">
