@@ -28,6 +28,13 @@ function CreateNote(props){
         /* Calling props onAdd (from CreateNote in App) which the same thing as calling addNote() 
         in App and will pass 'note' const as an input*/
         props.onAdd(note)
+        // after submit the note clear the input entries by using setNote
+        setNote(
+            {
+                title:"",
+                content:""
+            }
+        )
         // to prevent the referesh in the <form> once the user click on Add button
         event.preventDefault();
     }
