@@ -5,7 +5,9 @@ import CreateNote from "./CreateNote";
 import Note from "./Note";
 function App(){
 
-    function addNote(note){}
+    function addNote(note){
+        console.log(note)
+    }
 
     return(
     <>
