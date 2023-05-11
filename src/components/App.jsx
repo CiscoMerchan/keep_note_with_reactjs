@@ -4,10 +4,17 @@ import Footer from "./Footer";
 import CreateNote from "./CreateNote";
 import Note from "./Note";
 function App(){
+
+    function addNote(note){}
+
     return(
     <>
     <Header />
-        <CreateNote />
+        <CreateNote 
+            /*to pass the information from "note" in createNote in App and render it in Note. the transfere will 
+            be by passing a function("addNote()") as props ("onAdd")*/
+            onAdd={addNote}
+        />
         <Note 
             title="Title"
             content="content"
