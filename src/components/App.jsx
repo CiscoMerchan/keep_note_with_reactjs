@@ -20,6 +20,14 @@ function App(){
     /*function to delete Note from the array 'notes' using props*/ 
     function deleteNote(id){
         console.log('delete this item');
+        /*in setNotes will be deleted the noteItem from 'notes' using .filter(). it will
+        return all the prevNotes in 'notes' execpt the Note that have the id of the noteItem
+        clicked */ 
+        setNotes(prevNotes =>{
+            return prevNotes.filter((noteItem, index)=>{
+                return index !== id
+            })
+        })
     }
 
     return(
@@ -31,14 +39,19 @@ function App(){
             onAdd={addNote}
         />
         {/* .map() to render Note components from 'notes' array */}
-        {notes.map((noteItem) => {
-            return <Note
-            key={1}
+        {notes.map((noteItem, index) => {
+            return (<Note
+            /*add key and id attribute(using the index that provide .map()parameter) 
+            to identify the noteItem and be able to delete these attributes will be 
+            pass to Note component as props*/ 
+            key={index}
+            id={index}
             title={noteItem.title}
             content={noteItem.content} 
             // props to delete Note in the array 'notes' this props will trigger the deleteNote()
             onDelete={deleteNote}
             />
+            );
             })
             }
         {/* <Note 

@@ -6,8 +6,9 @@ function Note(props){
     
     function handleClick(){
         /* Once the user click in delete button it will trigger the props.onDelete()
-         which is the deleteNote() in App component*/
-        props.onDelete()
+         which is the deleteNote() in App component. the props id is the argumet given by
+         the .map() as index*/
+        props.onDelete(props.id);
     }
     
     return(
