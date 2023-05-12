@@ -6,7 +6,7 @@ This is a simple React.js app that allows the user to create and delete notes. T
 
 To use the app, follow these steps:
 
-1. Clone the project to your local machine.
+1. Clone the project to your local machine.<br>
     `git clone https://github.com/CiscoMerchan/keep_note_with_reactjs.git`
 2. Navigate to the project folder in your terminal.
 3. Run `npm install` to install all necessary dependencies.
